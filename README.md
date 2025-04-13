@@ -1,50 +1,46 @@
-# Welcome to your Expo app 👋
+# Next.js + Expo + Firebase Cloud Messaging (FCM) Integration
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Project Architecture](https://i.imgur.com/JQ6GhvL.png)  
+*A complete demo combining Next.js web app with Google Sign-In and Expo Android app with native FCM push notifications*
 
-## Get started
+## Features
+- **Next.js Web App**
+  - Google Sign-In with Firebase Authentication
+  - Material UI (MUI) components
+- **Expo Android App**
+  - Embedded Next.js app via WebView
+  - Native Firebase Cloud Messaging (FCM)
+  - M1/M2 Mac compatibility
+- **Shared Infrastructure**
+  - Single Firebase project for both platforms
+  - Cross-platform user authentication
 
-1. Install dependencies
+## Prerequisites
+- Node.js v18+
+- npm v9+
+- Android Studio (for emulator)
+- Firebase account
+- Apple Silicon (M1/M2) specific tools:
+  - JDK 11 (Zulu distribution recommended)
+  - ARM64 Android system images
 
-   ```bash
-   npm install
-   ```
+## Project Structure
 
-2. Start the app
+├── nextjs-app/ # Next.js web application
+├── expo-app/ # Expo Android application
+├── .gitignore
+└── README.md
 
-   ```bash
-    npx expo start
-   ```
+## Setup Instructions
 
-In the output, you'll find options to open the app in a
+### 1. Firebase Configuration
+1. Create a Firebase project at [console.firebase.google.com](https://console.firebase.google.com/)
+2. Add both **Web** and **Android** apps to your project
+3. Download `google-services.json` for Android
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+### 2. Next.js App Setup
 ```bash
-npm run reset-project
-```
+cd nextjs-app
+npm install
+cp .env.local.example .env.local
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
