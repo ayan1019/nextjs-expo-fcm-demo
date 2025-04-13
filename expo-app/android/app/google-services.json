@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "72085310047",
+    "project_id": "nextjs-expo-fcm-demo",
+    "storage_bucket": "nextjs-expo-fcm-demo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72085310047:android:f08fe4e89b412cec43e9ea",
+        "android_client_info": {
+          "package_name": "com.yourcompany.fcmdemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5Pkr0PSaaIs3C3kFJoDRyKNX7PwWfHc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
